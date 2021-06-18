@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Edit <%= user.name %>
+    </h1>
+    <form action="/User/<%= user._id %>?_method=PUT" method="POST">
+
+        <label for="name">NAME</label>
+        <input type="text" name="user[name]" id="name" value="<%=user.name%>" required>
+
+        <label for="age">AGE:</label>
+        <input type="number" name="user[age]" id="age" value="<%=user.age%>" required>
+
+        <label for="email">EMAIL:</label>
+        <input type="text" name="user[email]" id="email" value="<%=user.email%>" required>
+
+
+        <button type="submit">Submit!</button>
+
+
+    </form>
+</body>
+
+
+</html>
